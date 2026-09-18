@@ -3,323 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I Thought Bleeding Gums Were Just Part of Getting Older — Then I Learned What Lives in Your Mouth</title>
-<meta name="description" content="A reader's personal story about discovering the oral microbiome and the dissolvable probiotic candy that changed her nightly routine. Personal story, not medical advice.">
+<title>What I learned about bleeding gums | Personal story</title>
+<meta name="description" content="A personal story about the oral microbiome and one dissolvable probiotic candy. Not medical advice.">
 <meta name="robots" content="noindex, follow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --paper:#FAF5EB;
-  --paper-deep:#F3ECDD;
-  --ink:#22301F;
-  --ink-soft:#54604E;
-  --pine:#2D5A3D;
-  --pine-deep:#1E3F2B;
-  --mint:#DEE9DC;
-  --mint-line:#C4D6C2;
-  --terra:#D9531E;
-  --terra-deep:#B84314;
-  --gold:#C9A227;
-  --display:'Fraunces',Georgia,'Times New Roman',serif;
-  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
-  --shadow:0 10px 30px rgba(34,48,31,.10);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--body);
-  font-size:18px;
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-/* paper grain */
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.13 0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-/* reading progress */
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--terra);z-index:60;transition:width .1s linear}
-.page{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:0 22px 90px}
+  :root{
+    --ink:#0f1712;
+    --ink-soft:#16211a;
+    --card:#1b291f;
+    --parchment:#f2eee6;
+    --gold:#d6ad5d;
+    --gold-dim:#8a6b30;
+    --mint:#9be3c0;
+    --mint-dim:#4f8a68;
+    --text-dim:#a8b3a6;
+    --text-mid:#cdd6cc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.035) 1px, transparent 0) 0 0/22px 22px,
+      var(--ink);
+    color:var(--parchment);
+    font-family:Georgia,'Iowan Old Style',serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  .wrap{max-width:680px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
 
-/* ---------- masthead ---------- */
-.masthead{border-bottom:3px double var(--pine);padding:14px 0 12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.masthead .brand{font-family:var(--display);font-weight:900;letter-spacing:.22em;font-size:15px;color:var(--pine-deep);text-transform:uppercase}
-.masthead .section{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-.disclaimer-strip{background:var(--gold);color:#3B2E06;text-align:center;font-size:12.5px;font-family:Verdana,Geneva,sans-serif;letter-spacing:.08em;padding:7px 14px;text-transform:uppercase;font-weight:700}
+  .disclosure-bar{
+    background:var(--ink-soft);
+    padding:10px 24px;text-align:center;font-size:12px;color:var(--text-dim);
+    position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(255,255,255,0.05);
+  }
+  .glow{
+    position:fixed;top:-20%;left:50%;width:1000px;height:1000px;transform:translateX(-50%);
+    background:radial-gradient(circle, rgba(155,227,192,0.10) 0%, rgba(214,173,93,0.05) 40%, rgba(15,23,18,0) 68%);
+    pointer-events:none;z-index:0;
+  }
 
-/* ---------- article head ---------- */
-.kicker{margin:34px 0 10px;display:flex;align-items:center;gap:10px}
-.kicker .dot{width:8px;height:8px;background:var(--terra);border-radius:50%}
-.kicker span{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--terra-deep);font-family:Verdana,Geneva,sans-serif;font-weight:700}
-h1{
-  font-family:var(--display);font-weight:900;font-size:clamp(30px,6.4vw,46px);
-  line-height:1.14;letter-spacing:-.015em;color:var(--pine-deep);margin-bottom:18px;
-}
-h1 em{font-style:italic;font-weight:600;color:var(--terra)}
-.byline{display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid var(--mint-line);border-bottom:1px solid var(--mint-line);margin-bottom:26px}
-.byline .avatar{width:40px;height:40px;border-radius:50%;background:var(--pine);color:var(--mint);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:17px;flex:none}
-.byline .who{font-size:14.5px;color:var(--ink)}
-.byline .meta{font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
+  .hero{padding:64px 0 8px;text-align:center;position:relative;z-index:1}
+  .eyebrow{
+    display:inline-block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--gold);
+    padding:6px 14px;border:1px solid var(--gold-dim);border-radius:20px;margin-bottom:26px;
+  }
+  h1{font-size:clamp(30px,6.4vw,46px);font-weight:400;line-height:1.22;letter-spacing:-0.01em;max-width:560px;margin:0 auto 20px}
+  h1 em{font-style:italic;color:var(--gold)}
+  .h1-rule{width:64px;height:2px;margin:0 auto 22px;background:linear-gradient(90deg,var(--mint),var(--gold));border-radius:2px}
+  .sub{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:16.5px;color:var(--text-dim);max-width:460px;margin:0 auto;
+  }
 
-/* ---------- badges ---------- */
-.badges{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0 30px}
-.badge{background:#fff;border:1px solid var(--mint-line);border-radius:12px;padding:14px 10px;text-align:center;box-shadow:0 3px 10px rgba(34,48,31,.06)}
-.badge .b-icon{font-size:20px;line-height:1;margin-bottom:8px;display:block}
-.badge .b-txt{font-family:Verdana,Geneva,sans-serif;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--pine-deep);text-transform:uppercase;line-height:1.5;display:block}
+  .hero-img{margin:36px auto 8px;text-align:center;position:relative;z-index:1}
+  .hero-img img{max-width:340px;width:100%;display:block;margin:0 auto;border-radius:16px;border:1px solid rgba(214,173,93,0.25);box-shadow:0 20px 60px rgba(0,0,0,0.45)}
+  .img-note{font-size:12.5px;color:var(--text-dim);font-style:italic;margin-top:12px}
 
-/* ---------- article media ---------- */
-figure.hero{margin:0 0 30px}
-figure.hero img{width:100%;display:block;border-radius:14px;box-shadow:var(--shadow)}
-figcaption{font-size:12.5px;color:var(--ink-soft);padding:10px 4px 0;font-style:italic;border-bottom:none}
+  .story{padding:30px 0 6px;position:relative;z-index:1}
+  .story p{margin-bottom:22px;font-size:17.5px;color:var(--text-mid)}
+  .story p::first-letter{font-size:1.0em}
+  .story strong{color:var(--parchment)}
+  .story .label{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mint);margin:26px 0 14px;
+  }
 
-/* ---------- body copy ---------- */
-.article p{margin:0 0 24px}
-.article p.lede::first-letter{
-  font-family:var(--display);font-weight:900;font-size:64px;line-height:.82;
-  color:var(--pine);float:left;padding:8px 12px 0 0;
-}
-strong{color:var(--pine-deep)}
-.pullquote{
-  margin:38px 26px;padding:6px 0 6px 26px;border-left:4px solid var(--terra);
-  font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(20px,4.6vw,26px);
-  line-height:1.4;color:var(--pine-deep);
-}
-.pullquote small{display:block;font-family:Verdana,Geneva,sans-serif;font-style:normal;font-weight:400;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px}
-figure.mid{margin:34px 0}
+  .cards{display:grid;gap:12px;margin:10px 0 26px;position:relative;z-index:1}
+  .card{background:var(--card);border:1px solid rgba(214,173,93,0.16);border-radius:14px;padding:18px 20px}
+  .card h3{font-size:17px;font-weight:400;color:var(--gold);margin-bottom:6px}
+  .card p{font-size:15.5px;color:var(--text-mid)}
 
-/* ---------- what i learned ---------- */
-.section-label{display:flex;align-items:center;gap:14px;margin:44px 0 20px}
-.section-label::after{content:"";flex:1;height:1px;background:var(--mint-line)}
-.section-label span{font-family:var(--display);font-weight:700;font-style:italic;font-size:19px;color:var(--terra-deep)}
-.learn-grid{display:grid;gap:14px}
-.learn{background:#fff;border:1px solid var(--mint-line);border-left:5px solid var(--pine);border-radius:12px;padding:20px 20px 18px;box-shadow:0 4px 14px rgba(34,48,31,.05)}
-.learn h3{font-family:var(--display);font-size:19px;font-weight:700;color:var(--pine-deep);margin-bottom:8px;display:flex;gap:10px;align-items:baseline}
-.learn h3 .num{font-size:13px;color:var(--terra);font-weight:900;font-style:italic}
-.learn p{font-size:16.5px;margin:0;color:var(--ink)}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:8px 0 34px;position:relative;z-index:1}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:13px;color:var(--text-mid);border:1px solid rgba(155,227,192,0.25);border-radius:999px;padding:8px 16px;
+  }
+  .badge svg{flex:none}
 
-/* ---------- quality ticks ---------- */
-.ticks{display:grid;grid-template-columns:1fr;gap:10px;margin:26px 0 8px}
-.tick{display:flex;gap:12px;align-items:center;font-size:16.5px;background:var(--mint);border-radius:10px;padding:12px 16px}
-.tick svg{flex:none}
+  .cta-block{
+    background:linear-gradient(160deg,var(--card),var(--ink-soft));
+    border:1px solid rgba(214,173,93,0.3);border-radius:18px;
+    padding:38px 26px 32px;text-align:center;margin:0 0 40px;position:relative;z-index:1;
+    box-shadow:0 18px 50px rgba(0,0,0,0.35);
+  }
+  .cta-title{font-size:clamp(22px,4.6vw,27px);font-weight:400;margin-bottom:10px}
+  .cta-sub{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;color:var(--text-dim);max-width:440px;margin:0 auto 24px}
+  .cta-btn{
+    display:inline-block;background:linear-gradient(135deg,var(--gold),#b98d3e);color:#171204;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:700;font-size:16px;
+    text-decoration:none;padding:17px 34px;border-radius:999px;letter-spacing:.02em;
+    box-shadow:0 10px 30px rgba(214,173,93,0.35);transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(214,173,93,0.5)}
+  .cta-note{font-size:12.5px;color:var(--text-dim);margin-top:16px;font-style:italic}
 
-/* ---------- CTA ---------- */
-.cta{
-  margin:44px 0;background:linear-gradient(160deg,var(--pine-deep),var(--pine) 65%);
-  border-radius:18px;padding:34px 26px 30px;text-align:center;color:#F2F6EE;
-  box-shadow:var(--shadow);position:relative;overflow:hidden;
-}
-.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% -10%,rgba(201,162,39,.25),transparent 55%)}
-.cta>*{position:relative}
-.cta h2{font-family:var(--display);font-weight:900;font-size:clamp(23px,5vw,30px);line-height:1.2;margin-bottom:12px;letter-spacing:-.01em}
-.cta p{font-size:16px;opacity:.92;max-width:520px;margin:0 auto 22px;line-height:1.65}
-.btn{
-  display:inline-block;background:var(--terra);color:#fff;text-decoration:none;
-  font-family:Verdana,Geneva,sans-serif;font-weight:700;font-size:16px;letter-spacing:.03em;
-  padding:18px 34px;border-radius:999px;box-shadow:0 8px 24px rgba(217,83,30,.45);
-  transition:transform .18s ease,background .18s ease;animation:breath 2.6s ease-in-out infinite;
-}
-.btn:hover{background:var(--terra-deep);transform:translateY(-2px)}
-@keyframes breath{0%,100%{box-shadow:0 8px 24px rgba(217,83,30,.45)}50%{box-shadow:0 8px 34px rgba(217,83,30,.75)}}
-.cta .under{font-size:12.5px;opacity:.75;margin-top:14px;line-height:1.6}
-.cta .under a{color:#F8E9B0}
+  .faq{margin:0 0 36px;position:relative;z-index:1}
+  .faq-item{border-bottom:1px solid rgba(255,255,255,0.08)}
+  .faq-q{
+    padding:16px 0;cursor:pointer;font-size:17px;position:relative;padding-right:30px;user-select:none;list-style:none;
+  }
+  .faq-q::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:22px;font-weight:400}
+  .faq-item.open .faq-q::after{content:"–"}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-item.open .faq-a{max-height:220px}
+  .faq-a p{font-size:15.5px;color:var(--text-dim);padding-bottom:18px}
 
-/* ---------- ingredients ---------- */
-.ing{background:#fff;border:1.5px dashed var(--mint-line);border-radius:16px;padding:24px 24px 10px;margin:36px 0}
-.ing h3{font-family:var(--display);font-size:21px;font-weight:700;color:var(--pine-deep);margin-bottom:14px}
-.ing ul{list-style:none}
-.ing li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #EEE8DA;font-size:16.5px}
-.ing li:last-child{border-bottom:none}
-.ing li b{color:var(--pine-deep)}
-.ing .note{font-size:13px;color:var(--ink-soft);font-style:italic;padding:12px 0 10px}
+  .privacy{margin:0 0 30px;position:relative;z-index:1}
+  .privacy details{border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:4px 22px;background:rgba(255,255,255,0.02)}
+  .privacy summary{
+    cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);padding:16px 0;user-select:none;
+  }
+  .privacy h3{font-size:15.5px;font-weight:400;color:var(--mint);margin:14px 0 6px}
+  .privacy p{font-size:14px;color:var(--text-dim);margin-bottom:8px}
 
-/* ---------- faq ---------- */
-.faq{margin:10px 0 8px}
-.faq details{background:#fff;border:1px solid var(--mint-line);border-radius:12px;padding:2px 20px;margin-bottom:12px}
-.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:17.5px;color:var(--pine-deep);padding:16px 0;list-style:none;position:relative;padding-right:34px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--terra);font-weight:400;transition:transform .2s}
-.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
-.faq details p{padding:0 0 18px;font-size:16px;color:var(--ink)}
-
-/* ---------- footer ---------- */
-.footer{border-top:3px double var(--pine);margin-top:50px;padding-top:20px;font-size:12.5px;color:var(--ink-soft);line-height:1.7}
-.footer .updated{font-family:Verdana,Geneva,sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:11px;margin-bottom:14px}
-.footer p{margin-bottom:12px}
-
-/* ---------- sticky mobile cta ---------- */
-.sticky-cta{
-  position:fixed;left:0;right:0;bottom:0;z-index:50;transform:translateY(110%);
-  transition:transform .3s ease;background:rgba(30,63,43,.97);backdrop-filter:blur(6px);
-  padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px;
-}
-.sticky-cta.show{transform:translateY(0)}
-.sticky-cta .sc-txt{color:#F2F6EE;font-size:13px;line-height:1.4;font-family:Verdana,Geneva,sans-serif}
-.sticky-cta .sc-txt b{display:block;font-size:14.5px}
-.sticky-cta .btn{padding:13px 22px;font-size:14px;animation:none;flex:none;box-shadow:0 4px 14px rgba(217,83,30,.5)}
-
-/* ---------- reveals ---------- */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn{animation:none}}
-@media (max-width:560px){
-  body{font-size:17px}
-  .badges{grid-template-columns:1fr 1fr}
-  .badge:last-child{grid-column:1/-1}
-  .pullquote{margin:34px 8px}
-  .masthead{flex-direction:column;align-items:center;gap:2px}
-}
+  footer{border-top:1px solid rgba(255,255,255,0.08);padding:22px 0 44px;font-size:12.5px;color:var(--text-dim);position:relative;z-index:1}
+  footer p{margin-bottom:10px}
 </style>
 </head>
 <body>
-<div id="progress"></div>
-<div class="disclaimer-strip">Advertorial · Personal story — not a news article</div>
+<div class="disclosure-bar">Personal story · not a news article · contains affiliate links</div>
+<div class="glow"></div>
 
-<div class="page">
+<div class="wrap">
 
-  <header class="masthead">
-    <div class="brand">Wellness Notes</div>
-    <div class="section">Reader Stories · Oral Care</div>
+  <header class="hero">
+    <span class="eyebrow">A Reader's Story</span>
+    <h1>My gums bled every time I flossed — until I learned what actually <em>lives</em> in your mouth</h1>
+    <div class="h1-rule"></div>
+    <p class="sub">I'm not a dentist or a journalist. I'm just someone who got tired of blood in the sink — and started paying closer attention to my daily routine.</p>
   </header>
 
-  <div class="kicker rv"><span class="dot"></span><span>A Reader's Story</span></div>
-  <h1 class="rv">I Thought Bleeding Gums Were Just Part of <em>Getting Older</em> — Then I Started Reading About What Actually Lives in Your Mouth</h1>
+  <div class="hero-img">
+    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=macro%20photography%20of%20a%20small%20round%20white%20dissolvable%20probiotic%20candy%20tablet%20on%20a%20clean%20ceramic%20spoon%2C%20warm%20morning%20light%2C%20dark%20green%20background%2C%20minimal%20health%20product%20editorial%20photography%2C%20soft%20shadows&image_size=portrait_4_3" alt="A dissolvable probiotic candy on a ceramic spoon" width="680" height="510">
+    <p class="img-note">One candy, ten seconds to melt — that's the entire routine.</p>
+  </div>
 
-  <div class="byline rv">
-    <div class="avatar">K</div>
-    <div>
-      <div class="who">By Karen M., 52 — a reader like you, not a doctor or journalist</div>
-      <div class="meta">4 min read · Updated September 2026</div>
+  <section class="story">
+    <p>It wasn't one dramatic moment. It was years of it — blood in the sink, wincing at cold coffee, and the quiet worry about my breath in every meeting.</p>
+    <p>I didn't overhaul my life. I just started reading about one thing most people never think about: the <strong>balance of bacteria</strong> in the mouth.</p>
+    <p>Looking into what actually keeps teeth and gums healthy — beyond "just floss more" — is what led me to <strong>ProDentim</strong>, a melting probiotic candy built to repopulate the mouth with good bacteria.</p>
+
+    <p class="label">What I learned</p>
+  </section>
+
+  <div class="cards">
+    <div class="card">
+      <h3>It's not medication</h3>
+      <p>It's a dissolvable probiotic candy — built to support your daily routine, not to diagnose, treat, or cure any disease.</p>
+    </div>
+    <div class="card">
+      <h3>Studied probiotic strains</h3>
+      <p>Each candy delivers 3.5 billion CFU of strains commonly studied for oral health, like L. paracasei and B. lactis BL-04.</p>
+    </div>
+    <div class="card">
+      <h3>Ten seconds a day</h3>
+      <p>It melts on your tongue after brushing. No pills to swallow, no complicated protocol.</p>
+    </div>
+    <div class="card">
+      <h3>Already have dental problems?</h3>
+      <p>Talk to a dentist before starting any supplement — this supports your routine, it doesn't replace professional care.</p>
     </div>
   </div>
 
-  <div class="badges rv">
-    <div class="badge"><span class="b-icon">🛡️</span><span class="b-txt">60-Day Money-Back Guarantee</span></div>
-    <div class="badge"><span class="b-icon">🍬</span><span class="b-txt">3.5 Billion CFU per Candy</span></div>
-    <div class="badge"><span class="b-icon">⏱️</span><span class="b-txt">Dissolves in Seconds — No Pills</span></div>
+  <div class="badges">
+    <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9be3c0" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Made in an FDA-registered facility</span>
+    <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9be3c0" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>60-day money-back guarantee</span>
+    <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9be3c0" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>No pills to swallow</span>
   </div>
 
-  <figure class="hero rv">
-    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=macro%20photography%20of%20a%20small%20round%20white%20dissolvable%20probiotic%20candy%20tablet%20on%20a%20clean%20ceramic%20spoon%2C%20warm%20morning%20light%2C%20cream%20and%20mint%20green%20tones%2C%20minimal%20health%20product%20editorial%20photography%2C%20soft%20shadows&image_size=portrait_4_3" alt="A dissolvable probiotic candy resting on a ceramic spoon in warm morning light" width="880" height="660">
-    <figcaption>One candy, seconds to melt — that's the entire routine.</figcaption>
-  </figure>
+  <div class="cta-block">
+    <div class="cta-title">Want to see the full formula?</div>
+    <p class="cta-sub">You'll be taken to the official website, where you can review the full ingredient list, usage details, and guarantee policy.</p>
+    <a class="cta-btn" href="https://hop.clickbank.net/?affiliate=zzzzz&amp;vendor=PRODENTIM" target="_blank" rel="nofollow sponsored noopener">Visit the Official ProDentim Website</a>
+    <p class="cta-note">Link to the manufacturer's official website.</p>
+  </div>
 
-  <article class="article">
-    <p class="lede rv">For most of my adult life, I treated my mouth like a lost cause. Blood in the sink every time I flossed. A wince every time my coffee was too cold or too hot. And that quiet, middle-of-the-meeting worry: <em>is my breath okay?</em> Twice a year I'd sit in the dentist's chair, hear "just floss more," pay the bill, and go home feeling like my teeth were on a slow countdown I couldn't stop.</p>
-    <p class="rv">It wasn't one dramatic moment. It was months of small ones — until a dental hygienist said something almost in passing: <strong>"You know your mouth has its own bacterial balance, right?"</strong> I didn't know. I'd never once thought about it.</p>
-    <p class="rv">So I started reading. And what I found genuinely surprised me: your mouth is home to an entire ecosystem of bacteria — the <strong>oral microbiome</strong> — and the goal isn't to nuke all of it. It's to keep the good guys in charge. Here's the part that stung: some of the aggressive stuff I'd been using for years (harsh antiseptic mouthwash, I'm looking at you) doesn't discriminate. It wipes out the good along with the bad.</p>
-
-    <div class="pullquote rv">"Nobody had ever told me my mouth had an ecosystem — or that I'd been scrubbing it the wrong way for twenty years."
-      <small>— Karen M., reader story</small>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does ProDentim treat gum disease?</div>
+      <div class="faq-a"><p>No. It's a dietary supplement, not a medication, and it has not been evaluated by the FDA to diagnose, treat, cure, or prevent any disease. If you have bleeding gums or pain, please see a dentist.</p></div>
     </div>
-
-    <p class="rv">That rabbit hole is what eventually led me to <strong>ProDentim</strong> — a dissolvable probiotic candy built around repopulating the mouth with studied probiotic strains. I'll be honest: my first reaction was <em>candy… for teeth?</em> It sounded like something a marketing team dreamed up. But the format is actually the point — it melts on your tongue in seconds and gets the bacteria where they live, no pills to swallow, no complicated protocol.</p>
-    <p class="rv">I'm not here to promise you my results — everyone's mouth is different, and individual results vary. I'm sharing the routine that made my last checkup feel easier, and that my hygienist actually asked me about.</p>
-
-    <figure class="mid rv">
-      <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=editorial%20wellness%20photography%2C%20confident%20woman%20in%20her%20late%2040s%20smiling%20naturally%20at%20her%20bathroom%20mirror%2C%20warm%20natural%20window%20light%2C%20calm%20morning%20routine%2C%20soft%20neutral%20tones%2C%20health%20magazine%20aesthetic&image_size=portrait_4_3" alt="A woman smiling at her bathroom mirror during her morning routine" loading="lazy" width="880" height="660">
-      <figcaption>The routine takes ten seconds — usually right after brushing.</figcaption>
-    </figure>
-
-    <div class="section-label rv"><span>What I learned along the way</span></div>
-
-    <div class="learn-grid">
-      <div class="learn rv"><h3><span class="num">01</span> It's not toothpaste — it's not even a pill</h3><p>ProDentim is a melting candy you let dissolve on your tongue once a day. That's the whole routine. Designed to deliver probiotic strains directly to the environment they're meant to live in.</p></div>
-      <div class="learn rv"><h3><span class="num">02</span> It's a supplement, not a medication</h3><p>It supports your daily routine — it doesn't treat, cure, or prevent any disease. I still brush, floss, and see my dentist. This sits alongside all of that, not instead of it.</p></div>
-      <div class="learn rv"><h3><span class="num">03</span> The mouth connects to more than teeth</h3><p>Some emerging research links the balance of oral bacteria to sinus and respiratory comfort, and even digestion. I found that fascinating — I'd only ever thought of my mouth as "teeth storage."</p></div>
-      <div class="learn rv"><h3><span class="num">04</span> Already have serious dental problems?</h3><p>See a dentist first — full stop. A supplement supports your routine; it doesn't replace professional care when you need it.</p></div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I use it?</div>
+      <div class="faq-a"><p>One dissolvable candy a day after brushing. Full usage instructions and dosage are listed on the official manufacturer's website.</p></div>
     </div>
-
-    <div class="ticks rv">
-      <div class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#2D5A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F2F6EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Made in an FDA-registered facility</div>
-      <div class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#2D5A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F2F6EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Each candy delivers 3.5 billion CFU of probiotic strains</div>
-      <div class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#2D5A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#F2F6EE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>60-day money-back guarantee through the official site</div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where can I buy it safely?</div>
+      <div class="faq-a"><p>Only through the official website linked on this page — that's what keeps you eligible for the manufacturer's 60-day guarantee.</p></div>
     </div>
+  </div>
 
-    <div class="cta rv">
-      <h2>Want to see the full formula?</h2>
-      <p>You'll be taken to the official website, where you can review the complete ingredient list, usage directions, and the details of the 60-day guarantee before you decide anything.</p>
-      <a class="btn" href="https://hop.clickbank.net/?affiliate=zzzzz&amp;vendor=PRODENTIM" target="_blank" rel="nofollow sponsored noopener">Visit the Official ProDentim Website →</a>
-      <div class="under">Link to the manufacturer's official website.<br>This is an affiliate link — I may earn a commission at no extra cost to you.</div>
-    </div>
+  <div class="privacy">
+    <details>
+      <summary>Privacy Policy</summary>
+      <h3>Information we collect</h3>
+      <p>This site does not collect sensitive health data. No form on this site asks for medical information.</p>
+      <h3>Affiliate links</h3>
+      <p>This site contains affiliate links. If you click one and make a purchase, we may earn a commission at no additional cost to you. This does not influence the content presented, which reflects a personal opinion. Individual results vary.</p>
+      <h3>Cookies and third-party platforms</h3>
+      <p>We may use cookies and third-party tracking pixels for advertising and measurement purposes. See also the Meta and Google privacy policies.</p>
+      <h3>Products and returns</h3>
+      <p>This site is an independent promotional channel and does not process sales directly. Purchases are processed through the official manufacturer's website and ClickBank. Refund policies follow the official seller's terms.</p>
+      <h3>Contact</h3>
+      <p>fanzoneads · fanzoneads@outlook.com</p>
+    </details>
+  </div>
 
-    <div class="ing rv">
-      <h3>What's actually in it</h3>
-      <ul>
-        <li><b>Lactobacillus paracasei</b> — a probiotic strain commonly studied for gum and mouth environments</li>
-        <li><b>Lactobacillus reuteri</b> — researched for its role in oral bacterial balance</li>
-        <li><b>B. lactis BL-04</b> — a strain often studied alongside respiratory and immune health</li>
-        <li><b>Inulin (prebiotic fiber)</b> — food for the good bacteria you're putting in</li>
-        <li><b>Peppermint</b> — for that clean, just-brushed feeling</li>
-      </ul>
-      <div class="note">Plus additional strains and ingredients — the complete, current formula is always listed on the official website.</div>
-    </div>
-
-    <div class="section-label rv"><span>Questions people ask me</span></div>
-
-    <div class="faq rv">
-      <details>
-        <summary>Does ProDentim treat gum disease or cavities?</summary>
-        <p>No. It's a dietary supplement, not a medication, and it has not been evaluated by the FDA to diagnose, treat, cure, or prevent any disease. If you have bleeding gums, pain, or any dental problem, please see a dentist.</p>
-      </details>
-      <details>
-        <summary>How do I use it?</summary>
-        <p>One dissolvable candy a day, ideally after your normal brushing routine. Full directions and dosage are listed on the official manufacturer's website.</p>
-      </details>
-      <details>
-        <summary>Where can I buy it safely?</summary>
-        <p>Only through the official website — that's what keeps you covered by the manufacturer's 60-day money-back guarantee. I don't sell it, and neither does any marketplace.</p>
-      </details>
-    </div>
-
-    <div class="cta rv">
-      <h2>My routine takes ten seconds a day</h2>
-      <p>If you're curious whether repopulating your oral microbiome makes sense for you, the official site has the full ingredient list, the research behind each strain, and the 60-day guarantee.</p>
-      <a class="btn" href="https://hop.clickbank.net/?affiliate=zzzzz&amp;vendor=PRODENTIM" target="_blank" rel="nofollow sponsored noopener">See the Official ProDentim Website →</a>
-      <div class="under">This is my personal story — individual results vary. This page contains affiliate links.</div>
-    </div>
-  </article>
-
-  <footer class="footer">
-    <div class="updated">Last updated: September 2026</div>
-    <p><b>Story disclosure:</b> This is a personal story published in an advertorial format. It is not news, not medical advice, and not a promise of results. Individual experiences vary. The author is not a dentist or healthcare professional.</p>
-    <p><b>FTC disclosure:</b> This page contains affiliate links. If you make a purchase through them, the publisher may earn a commission at no additional cost to you.</p>
-    <p><b>FDA disclosure:</b> Statements on this page have not been evaluated by the Food and Drug Administration. ProDentim is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease.</p>
-    <p><b>ClickBank disclosure:</b> ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p>
+  <footer>
+    <p>Statements on this page have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p>ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p>
+    <p>Last updated: September 2026</p>
   </footer>
 
 </div>
-
-<div class="sticky-cta" id="stickyCta">
-  <div class="sc-txt"><b>ProDentim</b>Official site · 60-day guarantee</div>
-  <a class="btn" href="https://hop.clickbank.net/?affiliate=zzzzz&amp;vendor=PRODENTIM" target="_blank" rel="nofollow sponsored noopener">Visit →</a>
-</div>
-
-<script>
-(function(){
-  var prog=document.getElementById('progress');
-  var sticky=document.getElementById('stickyCta');
-  var heroShown=false;
-  function onScroll(){
-    var h=document.documentElement;
-    var max=h.scrollHeight-h.clientHeight;
-    prog.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
-    if(!heroShown&&h.scrollTop>500){sticky.classList.add('show');heroShown=true;}
-  }
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-  }else{
-    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
-  }
-})();
-</script>
 </body>
 </html>
